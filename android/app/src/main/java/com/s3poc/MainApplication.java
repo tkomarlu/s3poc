@@ -10,6 +10,9 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.imagepicker.ImagePickerPackage;
+import com.facebook.react.shell.MainReactPackage;
+import java.util.Arrays;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -22,6 +25,8 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
+          @SuppressWarnings("UnnecessaryLocalVariable")
+          List<ReactPackage> packages = new PackageList(this).getPackages();
           return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
             new ImagePickerPackage());
